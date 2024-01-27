@@ -1,0 +1,142 @@
+/* CSS RESET */
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*
+2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+
+/*
+7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+8. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+
+/* MY STYLES */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Overlock SC', sans-serif;
+    background-color:  hsl(218, 23%, 16%);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-div {
+    background-color: hsl(217, 19%, 24%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    width: 500px;
+}
+
+h1 {
+    color: hsl(150, 100%, 66%);
+    font-size: 16px;
+    text-align: center;
+}
+
+p {
+    font-family: 'Salsa', cursive;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    color:  hsl(217, 19%, 88%);
+    font-size: 25px;
+}
+
+.divider {
+    width: 100%;
+}
+
+#generateBtn {
+    position: relative;
+    align-self: start;
+    background-color: hsl(150, 100%, 66%);
+    padding: 15px;
+    border-radius: 50%;
+    bottom: -20px;
+    margin: auto;
+    cursor: pointer;
+}
+
+#generateBtn img {
+    height: 20px;
+}
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    font-family: 'Gurajada', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+footer a {
+    color: hsl(150, 100%, 66%);
+}
+
+/* MEDIA QUERY*/
+@media screen and (max-width: 530px) {
+    #main-div {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    p {
+        width: 90%;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Advice Generator</title>
+        <link rel="icon" href="/images/favicon-32x32.png">
+        <link rel="stylesheet" href="/styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gurajada&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <div id="main-div">
+                <h1>Advice #<%= adviceId %></h1>
+                <p>"<%- adviceText %>"</p>
+                <picture>
+                    <source media="(min-width: 600px)" srcset="/images/pattern-divider-desktop.svg" class="divider">
+                    <source media="(max-width: 599px)" srcset="/images/pattern-divider-mobile.svg" class="divider">
+                    <img src="/images/pattern-divider-mobile.svg" alt="An image pattern." class="divider">
+                </picture>
+                <div id="generateBtn">
+                    <img src="/images/icon-dice.svg" alt="Image of a dice.">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Coded by <a href="https://github.com/foguibe">Fortune Oguibe</a></p>
+        </footer>
+    </body>
+    <script src="/script.js"></script>
+</html>
