@@ -24,7 +24,7 @@ app.get("/", async function(req, res) {
 
 // After app.use(express.static('public'));
 app.get('/favicon.ico', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'image', 'favicon-32x32.png'));
+    res.sendFile(path.join(__dirname, 'public', 'images', 'favicon-32x32.png'));
 });
 
 // Start the server
