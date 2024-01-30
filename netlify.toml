@@ -5,13 +5,13 @@
   command = "npm start"
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+  package = "@netlify/plugin-nextjs"  # Adjust based on your project setup
 
 [dev]
   functionsPort = 34567
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/views/index.ejs"
   status = 200
   force = true
