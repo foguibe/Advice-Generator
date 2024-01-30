@@ -6,6 +6,7 @@ const path = require('path'); // Add this line for the 'path' module
 // Serve static files from the "public" directory, and set the view engine to "ejs"
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '..', 'views'));
 
 // Route Handling and Configuration
 app.get("/", async function(req, res) {
@@ -23,11 +24,11 @@ app.get("/", async function(req, res) {
 
 // After app.use(express.static('public'));
 app.get('/favicon.ico', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'favicon-32x32.png'));
+    res.sendFile(path.join(__dirname, 'public', 'image', 'favicon-32x32.png'));
 });
 
 // Start the server
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
