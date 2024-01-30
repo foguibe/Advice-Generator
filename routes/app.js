@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const axios = require('axios');
-const { error } = require('console');
+const path = require('path'); // Add this line for the 'path' module
 
 // Serve static files from the "public" directory, and set the view engine to "ejs"
 app.use(express.static('public'));
@@ -21,6 +21,10 @@ app.get("/", async function(req, res) {
     }
 });
 
+// After app.use(express.static('public'));
+app.get('/favicon.ico', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'favicon.ico'));
+});
 
 // Start the server
 const PORT = 3000;
